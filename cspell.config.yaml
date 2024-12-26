@@ -1,0 +1,12 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - annonce
+  - deitails
+  - designes
+ignoreWords: []
+import: []
+enabledFileTypes:
+  html: false

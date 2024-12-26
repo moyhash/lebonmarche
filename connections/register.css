@@ -1,0 +1,136 @@
+
+.registerbtn:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.papa {
+  margin-top: 10px;
+  position: relative;
+}
+.papa .icon-eye1{
+  position: absolute; 
+  top: 10px;
+  right: 28px;
+  width: 25px;
+  color: #484f4c;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+}
+.papa .icon-eye-slash{
+  position: absolute; 
+  top: 10px;
+  right: 28px;
+  width: 25px;
+  color: #425f54;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+}
+.papa .icon-eye1:hover{
+  cursor: pointer;
+}
+.papa .icon-eye-slash:hover{
+  cursor: pointer;
+}
+
+.icon-check_circle {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  color: #04aa6d;
+  font-size: 20px;
+  size: 50px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.papa p {
+  color: red;
+  display: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 10px;
+  padding-top: 2px;
+}
+
+.error {
+  border: 1px solid red !important;
+}
+
+.success {
+  border: 1px solid #04aa6d !important;
+}
+
+
+/* START LOGIN PAGE*/
+.parent {
+  position: relative;
+}
+
+.parent .icon-eye1{
+  position: absolute; 
+  top: 10px;
+  right: 5px;
+  width: 25px;
+  color: #484f4c;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+  /* display: none; */
+}
+.parent .icon-eye-slash{
+  position: absolute; 
+  top: 10px;
+  right: 5px;
+  width: 25px;
+  color: #425f54;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+  /* display: none; */
+}
+.parent .icon-eye1:hover{
+  cursor: pointer;
+}
+.parent .icon-eye-slash:hover{
+  cursor: pointer;
+}
+
+/* RESET PASSWORD PAGE */
+.reset-pass {
+  position: relative;
+}
+
+.reset-pass .icon-eye1{
+  position: absolute; 
+  top: 8px;
+  right: 5px;
+  width: 25px;
+  color: #484f4c;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+  /* display: none; */
+}
+.reset-pass .icon-eye-slash{
+  position: absolute; 
+  top: 8px;
+  right: 5px;
+  width: 25px;
+  color: #425f54;
+  font-size: 20px;
+  opacity: 8;
+  transition: all 0.5s;
+  /* display: none; */
+}
+.reset-pass .icon-eye1:hover{
+  cursor: pointer;
+}
+.reset-pass .icon-eye-slash:hover{
+  cursor: pointer;
+}
+
+
+

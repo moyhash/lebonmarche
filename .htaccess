@@ -1,0 +1,25 @@
+
+RewriteEngine On
+
+#https://www.youtube.com/watch?v=byjMGftJeyU&ab_channel=QuickProgramming
+#https://www.youtube.com/watch?v=39ax8OgOGiw&ab_channel=QuickProgramming
+
+#https://www.youtube.com/watch?v=1f3DM6xqR2I&ab_channel=CodeBoxx
+
+#RewriteBase /CleanURL/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php?$1 [L,QSA]
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule (.*) /%1 [R=302,L]  
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule (.*) /%1 [R=302,L]  
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+# En cas de Page non trouvé
+ErrorDocument 404 /lebonmarche/connections/404-Not.html

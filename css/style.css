@@ -1,0 +1,44 @@
+/* CSS Variable */
+:root {
+  /*COLOR*/
+  --color-primary: #ee5057;
+  --color-secondary: #514f4f;
+  --color-text: #5c5858;
+  --color-light: #898989;
+
+  /*FONT*/
+  --font-primary: "Open Sans", Helvetica, Arial, sans-serif;
+  --font-bold: 700;
+  --font-light: 400;
+  --font-size-text: 13px;
+  --font-size-title: 20px;
+  --font-size-section-title: 48px;
+
+  /*SIZE*/
+  --size-primary: 25px;
+  --size-double: calc(var(--size-primary) * 2);
+  --size-half: calc(var(--size-primary) / 2);
+
+  --margin-primary: var(--size-primary);
+  --padding-primary: var(--size-primary);
+  --padding-double: var(--size-double);
+  --padding-half: var(--size-half);
+
+  --height-primary: 100px;
+  --height-logo: 60px;
+
+  /* Breakpoint */
+  --mediaquery-md: 768px;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    height: var(--height-primary);
+  }
+
+  .navbar .level-nav-link.nav-link {
+    /*padding: 12px;*/
+
+    padding: var(--padding-primary) var(--padding-primary);
+  }
+}

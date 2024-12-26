@@ -1,0 +1,51 @@
+
+J'ai le tableau comments avec un column User_Id comme foreigne key
+J'ai le tableau users avec son column User_ID comme premiere key
+
+$stmt = $conn->prepare("SELECT comments.*, users.Username AS UserName from comments
+INNER JOIN users ON users.UserID = comments.User_ID
+ORDER BY Com_ID DESC LIMIT $numComments");
+
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+Pour lebonmarche
+
+1:> Create Annonce avec 1 photo minimum
+2:> Rajouter des fotos par Checking the Item_ID
+
+
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+Relation
+
+table user
+table annonce
+table images
+
+Si je suprrime une annonce en meme temp les images doit etre supprimé 
+Si je supprime l'user en meme temp ses annonces doit etre supprimé
+
+ALTER TABLE images
+ADD CONSTRAINT annonce_img
+FOREIGN KEY(annonce_id)
+REFERENCES annonces(id)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+
+ALTER TABLE annonces
+ADD CONSTRAINT user_annonces
+FOREIGN KEY(user_id)
+REFERENCES users(userid)
+ON UPDATE CASCADE
+ON DELETE CASCADE;
+
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+
+J'ai le tableau annonces avec un column user_Id comme foreigne key
+J'ai le tableau users avec son column userid comme premiere key
+
+( SELECT * FROM annonces + users.name From users )
+stmt = $conn->prepare("SELECT annonces.*, users.name AS UserName from annonces
+INNER JOIN users ON users.userid = annonces.user_id");
+
+RUN THIS IN SQL REQUETE & SEE THE RESULT
+SELECT annonces.*, users.name AS UserName from annonces 
+INNER JOIN users ON users.userid = annonces.user_id;
